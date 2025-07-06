@@ -7,24 +7,21 @@ A full-stack social wishlist app where users can create shared wishlists, add pr
 
 ## 📸 Screenshots
 
-> _Include a few screenshots of your app UI here (Homepage, Wishlist page, Add product form, etc.) or a Loom/video demo link._
+![Home Screenshot](./public/home.png)
+![Dashboard Screenshot](./public/dashboard.png)
+
 
 ---
 
 ## 🚀 Features
 
-### 👥 User Features
-- User signup & login (Firebase Auth)
-- Create & manage multiple wishlists
-- Add / edit / delete products (with image URL & price)
-- See who added which item
-- Mock invite system to add other users
-- Responsive UI for mobile & desktop
-
-### 💬 Bonus Features
-- Real-time sync using Firebase Realtime Database
-- Emoji reactions on wishlist products
-- Modern dark mode + cyberpunk design theme (if applicable)
+- Smooth, intuitive onboarding to get users up and running fast
+- Fully responsive layout, optimized for all devices
+- Polished transitions and animations for a modern look and feel
+- Add rich product details: name, image, price, and description
+- Clearly track who added or edited each product (user attribution)
+- Invite team members to collaborate on shared wishlists
+- Modern dark mode + cyberpunk design theme 
 
 ---
 
@@ -32,66 +29,104 @@ A full-stack social wishlist app where users can create shared wishlists, add pr
 
 | Layer      | Technology                    |
 |------------|-------------------------------|
-| Frontend   | React.js + Tailwind CSS       |
-| Backend    | Node.js + Express.js (REST API) |
-| Database   | Firebase Realtime DB / Firestore |
-| Auth       | Firebase Authentication       |
-| Hosting    | (Optional: Vercel / Netlify)  |
+| Frontend   | Next.js + Tailwind CSS + Typescript + ShadCN      |
+| Backend    | Node.js |
+| Database   | MongoDB |
+| Auth       | JWT + bcryptjs       |
+| Hosting    | Vercel  |
 
 ---
 
-## ⚙️ Setup Instructions
+## 🚀 Quick Start
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/wishlist-app.git
-   cd wishlist-app
-   ```
+### ✅ Prerequisites
+- Node.js 18+ installed
+- MongoDB Atlas account (free tier available)
+- Git installed
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+### 🧱 Installation
 
-3. **Set up Firebase**
-   - Create a Firebase project.
-   - Enable Email/Password Auth.
-   - Set up Firestore or Realtime DB.
-   - Add your config to `.env`:
-     ```
-     VITE_FIREBASE_API_KEY=your_api_key
-     VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-     ...
-     ```
+```bash
+git clone https://github.com/yourusername/flockwish-app.git
+cd flockwish-app
+npm install
+```
 
-4. **Start the app**
-   ```bash
-   npm run dev
-   ```
+### ⚙️ Environment Setup
+
+```bash
+# Create environment file
+cp .env.example .env.local
+```
+
+Add your environment variables in `.env.local`:
+
+```env
+# MongoDB Atlas Connection String
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/flockwish
+
+# JWT Secret (generate a strong random string)
+JWT_SECRET=your_super_secret_jwt_key_minimum_32_characters
+
+# Environment
+NODE_ENV=development
+```
+
+### 🔌 MongoDB Setup
+- Create a MongoDB Atlas account & cluster (free tier)
+- Create a database user
+- Get the connection string and update `MONGODB_URI` in `.env.local`
+
+### 🏃‍♀️ Run the App
+
+```bash
+npm run dev
+```
+
+Visit: [http://localhost:3000](http://localhost:3000)
 
 ---
+
 
 ## 📁 Folder Structure (Simplified)
 
 ```
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── services/ (API + Firebase)
-│   ├── styles/
-├── backend/
-│   ├── server.js
-│   ├── routes/
-│   ├── controllers/
+FlockShop/
+├── app/                   # Next.js App Router
+│   ├── api/               # Backend API routes
+│   │   ├── auth/          # Authentication endpoints
+│   │   └── wishlists/     # Wishlist CRUD operations
+│   ├── dashboard/         # User dashboard
+│   ├── login/             # Authentication pages
+│   ├── signup/
+│   └── wishlist/          # Wishlist management
+├── lib/                   # Utilities and database
+│   ├── mongodb.ts         # Database connection
+│   └── models/            # TypeScript interfaces
+├── components/ui/         # Reusable UI components
+├── hooks/                 # Custom React hooks
+└── public/                # Static assets
 ```
 
 ---
 
-## ✅ Assumptions & Limitations
+## 🔧 API Endpoints
 
-- Invite system is mocked — real-time group invite via email is not implemented.
-- Auth uses Firebase to simplify backend complexity.
-- Emoji reactions stored with product data in Firestore.
+### Authentication
+- `POST /api/auth/signup` – User registration
+- `POST /api/auth/login` – User login
+- `GET /api/auth/me` – Get current user
+- `POST /api/auth/logout` – Logout
+
+### Wishlists
+- `GET /api/wishlists` – Fetch user wishlists
+- `POST /api/wishlists` – Create wishlist
+- `GET /api/wishlists/[id]` – View specific wishlist
+
+### Products
+- `POST /api/wishlists/[id]/products` – Add product
+- `DELETE /api/wishlists/[id]/products/[productId]` – Remove product
+
 
 ---
 
@@ -108,8 +143,7 @@ A full-stack social wishlist app where users can create shared wishlists, add pr
 ## 📦 Submission
 
 - Source Code: [GitHub Repo Link](https://github.com/yourusername/wishlist-app)
-- Demo Video: [Loom / YouTube Demo Link](https://loom.com/share/yourvideo)
-- Deployment (Optional): [Live App Link](https://wishlist-app.vercel.app/)
+- Deployment: [Live App Link](https://wishlist-app.vercel.app/)
 
 ---
 
