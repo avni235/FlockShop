@@ -7,8 +7,8 @@ A full-stack social wishlist app where users can create shared wishlists, add pr
 
 ## 📸 Screenshots
 
-![Home Screenshot](public/home.png)
-![Dashboard Screenshot](public/dashboard.png)
+![Home Screenshot](public/home.PNG)
+![Dashboard Screenshot](public/dashboard.PNG)
 
 
 ---
