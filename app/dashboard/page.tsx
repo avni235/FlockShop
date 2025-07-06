@@ -207,7 +207,7 @@ export default function DashboardPage() {
             </p>
             {!searchTerm && (
               <Link href="/wishlist/addWishlist">
-                <Button className="bg-[#00b8ff] hover:bg-[#7ddafe] text-black shadow-lg transition-all duration-300">
+                <Button className="bg-gradient-to-r from-[#d67df7] to-[#605dfe] hover:brightness-110 text-black shadow-lg transition-all duration-300">
                   <Plus className="w-4 h-4 mr-2" />
                   Create Your First Wishlist
                 </Button>
