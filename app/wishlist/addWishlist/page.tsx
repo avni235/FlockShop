@@ -114,7 +114,7 @@ export default function NewWishlistPage() {
                 <Input
                   id="name"
                   type="text"
-                  placeholder="e.g., Office Supplies Q1 2025"
+                  placeholder="e.g., Birthday Gifts"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="mt-1 bg-white/10 text-white border-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-[#d67df7]"
