@@ -1,5 +1,5 @@
 
-# 🛍️ Collaborative Wishlist App
+# 🛍️FlockShop - Collaborative Wishlist App
 
 A full-stack social wishlist app where users can create shared wishlists, add products, and collaborate in real-time — ideal for group shopping, gifting, or planning sprees.
 
@@ -7,8 +7,8 @@ A full-stack social wishlist app where users can create shared wishlists, add pr
 
 ## 📸 Screenshots
 
-![Home Screenshot](./public/home.png)
-![Dashboard Screenshot](./public/dashboard.png)
+![Home Screenshot](public/home.png)
+![Dashboard Screenshot](public/dashboard.png)
 
 
 ---
@@ -47,8 +47,8 @@ A full-stack social wishlist app where users can create shared wishlists, add pr
 ### 🧱 Installation
 
 ```bash
-git clone https://github.com/yourusername/flockwish-app.git
-cd flockwish-app
+git clone https://github.com/avni235/FlockShop.git
+cd FlockSho
 npm install
 ```
 
@@ -63,7 +63,7 @@ Add your environment variables in `.env.local`:
 
 ```env
 # MongoDB Atlas Connection String
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/flockwish
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net
 
 # JWT Secret (generate a strong random string)
 JWT_SECRET=your_super_secret_jwt_key_minimum_32_characters
@@ -132,17 +132,22 @@ FlockShop/
 
 ## 📈 How I'd Improve or Scale
 
-- Integrate proper access control for wishlists (only invited users can edit).
-- Use WebSockets (Socket.IO) if not using Firebase for real-time sync.
-- Add image uploads via Firebase Storage.
-- Enable push notifications for reactions/comments.
-- Create a mobile app version using React Native.
+- Integrate proper access control for wishlists (only invited users can edit)
+- Add image uploads via Firebase Storage
+- Enable push notifications for reactions/comments
+- Implement activity logs to track who added/edited what and when
+- Add wishlist templates (e.g., “Birthday Gifts”, “Travel Essentials”) to speed up list creation
+- Introduce categories and filters to better organize products
+- Enable emoji-based filtering or sorting (e.g., “most loved” items)
+- Add comment threads with reply functionality
+- Offer an export to PDF or shareable link for wishlists
+- Integrate smart suggestions based on previous wishlist behavior (AI-powered in the future)
 
 ---
 
 ## 📦 Submission
 
-- Source Code: [GitHub Repo Link](https://github.com/yourusername/wishlist-app)
+- Source Code: [GitHub Repo Link](https://github.com/avni235/FlockShop.git)
 - Deployment: [Live App Link](https://wishlist-app.vercel.app/)
 
 ---
@@ -150,4 +155,4 @@ FlockShop/
 ## 🙌 Author
 
 **Avneet Kaur**  
-[GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourprofile)
+[GitHub](https://github.com/avni235) • [LinkedIn](https://linkedin.com/in/avneet-kaur2)
