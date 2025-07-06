@@ -145,7 +145,7 @@ export default function NewWishlistPage() {
                 <Link href="/dashboard" className="flex-1">
                   <Button
                     type="button"
-                    variant="outline"
+                    variant="gradientOutline"
                     className="w-full border-white/20 text-white hover:bg-white/10"
                   >
                     Cancel
