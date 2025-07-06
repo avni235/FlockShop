@@ -157,7 +157,7 @@ export default function DashboardPage() {
     </Link>
   </Card>
      <p className="text-xl text-gray-300 mb-5">Your Wishlists</p>
-        <div className="grid mb-20 pb-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid pb-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredWishlists.map((wishlist, index) => (
             <Link key={wishlist._id} href={`/wishlist/${wishlist._id}`}>
               <Card
@@ -195,6 +195,7 @@ export default function DashboardPage() {
         </div>
 
         {filteredWishlists.length === 0 && !isLoading && (
+          <div className="mb-20">
           <div className={`text-center py-16 transform transition-all duration-700 delay-600 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-[#d67df7] to-[#605dfe] bg-clip-text text-transparent mb-2">
               {searchTerm ? "No wishlists found" : "Your wishlist journey starts here"}
@@ -213,7 +214,9 @@ export default function DashboardPage() {
               </Link>
             )}
           </div>
+          </div>
         )}
+        <div className="mt-20"></div>
       </div>
 
 

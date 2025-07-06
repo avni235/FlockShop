@@ -81,7 +81,7 @@ export default function HomePage() {
           <p className="text-gray-300 text-lg sm:text-xl mt-4 mb-6">
             Collaborate with friends and family on your favorite products.
           </p>
-          <Link href="/login">
+          <Link href="/signup">
             <Button className="bg-gradient-to-r from-[#d67df7] to-[#605dfe] hover:brightness-110 text-black">
               Get Started
             </Button>
