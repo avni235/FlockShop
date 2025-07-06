@@ -148,7 +148,7 @@ FlockShop/
 ## 📦 Submission
 
 - Source Code: [GitHub Repo Link](https://github.com/avni235/FlockShop.git)
-- Deployment: [Live App Link](https://wishlist-app.vercel.app/)
+- Deployment: [Live App Link](https://flock-shop-lilac.vercel.app/)
 
 ---
 
